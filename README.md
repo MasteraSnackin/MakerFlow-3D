@@ -115,8 +115,23 @@ VITE_RUNWARE_API_KEY=your_key_here
 ```
 
 ## Screenshots
-*(Add screenshots of the application here showing the prompt stage, reference sheet generation, and 3D sculpting view)*
+### Blueprint Generation
 
+![Blueprint Reference - Four-view orthographic reconstruction](docs/images/blueprint-stage.png)
+*Four-view orthographic blueprint generated from text prompt, showing front, back, left, and right views with artistic style selection.*
+
+### 3D Workbench - Wireframe View
+
+![3D Workbench Wireframe](docs/images/wireframe-view.png)
+*Interactive 3D workbench displaying wireframe mesh with blueprint overlay and clipping tools for precise geometry inspection.*
+
+### 3D Workbench - Solid Render
+
+![3D Workbench Solid Render 1](docs/images/solid-render-1.png)
+*Fully rendered 3D model with texture maps and lighting, ready for export to STL format.*
+
+![3D Workbench Solid Render 2](docs/images/solid-render-2.png)
+*Alternative angle showing the neural sculpt output with manufacturing-optimized geometry.*
 ## API Reference
 This project consumes external APIs. It does not provide its own public API.
 -   **Google Gemini API**: Used for `generateContent` with multimodal prompts.
