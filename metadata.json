@@ -1,0 +1,7 @@
+{
+  "name": "MakerFlow 3D",
+  "description": "A professional 2D-to-3D-Printing pipeline using Gemini's spatial reasoning to act as a Neural Sculptor, converting text prompts into manifold 3D primitive volumes ready for manufacturing.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
