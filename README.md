@@ -136,18 +136,22 @@ Watch MakerFlow 3D in action:
 > 3. Or use the GitHub editor to paste images directly (they'll be auto-hosted)
 
 
-![Blueprint Reference - Four-view orthographic reconstruction](docs/images/blueprint-stage.png)
+![Blueprint Reference - Four-view orthographic reconstruction](docs/images/blueprint-stage.png)![Screenshot 2026-02-07 152736](https://github.com/user-attachments/assets/a5c95413-8696-4f05-9889-0a54eb84446a)
+
 *Four-view orthographic blueprint generated from text prompt, showing front, back, left, and right views with artistic style selection.*
 
 ### 3D Workbench - Wireframe View
 
-![3D Workbench Wireframe](docs/images/wireframe-view.png)
+![3D Workbench Wireframe](docs/images/wireframe-view.png)![Screenshot 2026-02-07 152637](https://github.com/user-attachments/assets/73907720-ff5c-44aa-8438-4c1a3d3a9ab8)
+
 *Interactive 3D workbench displaying wireframe mesh with blueprint overlay and clipping tools for precise geometry inspection.*
 
 ### 3D Workbench - Solid Render
 
-![3D Workbench Solid Render 1](docs/images/solid-render-1.png)
-*Fully rendered 3D model with texture maps and lighting, ready for export to STL format.*
+![3D Workbench Solid Render 1](docs/images/solid-render-1.png)![Screenshot 2026-02-07 152703](https://github.com/user-attachments/assets/8d41a00f-757c-4d5a-85e1-443367f16b77)
+
+*Fully rendered 3D model with texture maps and lighting, ready for export to STL![Uploading Screenshot 2026-02-07 152703.jpg…]()
+ format.*
 
 ![3D Workbench Solid Render 2](docs/images/solid-render-2.png)
 *Alternative angle showing the neural sculpt output with manufacturing-optimized geometry.*
