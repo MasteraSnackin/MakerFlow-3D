@@ -7,8 +7,12 @@ import { Primitive3D, ModelData, ArtisticStyle } from "../types";
  */
 export const generateReferenceSheet = async (prompt: string, customApiKey?: string): Promise<string> => {
   // Use custom key if provided, otherwise fall back to environment key
-  const ai = new GoogleGenAI({ apiKey: customApiKey || process.env.API_KEY });
-  
+  // Use custom key if provided, otherwise fall back to environment key
+  const apiKey = customApiKey || import.meta.env.VITE_GEMINI_API_KEY;
+  if (!apiKey) throw new Error("API Key not found. Please set it in Settings.");
+
+  const ai = new GoogleGenAI({ apiKey });
+
   const fullPrompt = `A high-quality professional 3D character design reference sheet of ${prompt}. 
   Strict horizontally-aligned 4-view orthographic layout showing: Front, Back, Left, Right views. 
   White background, clean lines, minimalist aesthetic, suitable for 3D modeling. 
@@ -16,7 +20,7 @@ export const generateReferenceSheet = async (prompt: string, customApiKey?: stri
   Views must be precisely aligned horizontally so the head and feet levels match across all views.`;
 
   const response = await ai.models.generateContent({
-    model: 'gemini-2.5-flash-image',
+    model: 'imagen-3.0-generate-001',
     contents: {
       parts: [{ text: fullPrompt }]
     },
@@ -40,10 +44,13 @@ export const generateReferenceSheet = async (prompt: string, customApiKey?: stri
  * Uses spatial reasoning to convert a concept into a manifold 3D volume (Primitives)
  */
 export const reconstruct3DVolume = async (prompt: string, imageBase64?: string, style: ArtisticStyle = 'STANDARD', customApiKey?: string): Promise<ModelData> => {
-  const ai = new GoogleGenAI({ apiKey: customApiKey || process.env.API_KEY });
-  
+  const apiKey = customApiKey || import.meta.env.VITE_GEMINI_API_KEY;
+  if (!apiKey) throw new Error("API Key not found. Please set it in Settings.");
+
+  const ai = new GoogleGenAI({ apiKey });
+
   let styleInstruction = "";
-  switch(style) {
+  switch (style) {
     case 'LOW_POLY':
       styleInstruction = "Use a Low Poly aesthetic. Favor 'BOX' primitives and faceted shapes. Avoid smooth curves. Ensure geometry looks like a 90s video game asset.";
       break;
@@ -86,7 +93,7 @@ export const reconstruct3DVolume = async (prompt: string, imageBase64?: string, 
   }
 
   const response = await ai.models.generateContent({
-    model: 'gemini-3-pro-preview',
+    model: 'gemini-1.5-pro',
     contents: { parts },
     config: {
       systemInstruction,
@@ -102,18 +109,18 @@ export const reconstruct3DVolume = async (prompt: string, imageBase64?: string, 
               type: Type.OBJECT,
               properties: {
                 type: { type: Type.STRING, description: 'BOX, SPHERE, CAPSULE, or CYLINDER' },
-                position: { 
-                  type: Type.ARRAY, 
+                position: {
+                  type: Type.ARRAY,
                   items: { type: Type.NUMBER },
                   description: '[x, y, z]'
                 },
-                rotation: { 
-                  type: Type.ARRAY, 
+                rotation: {
+                  type: Type.ARRAY,
                   items: { type: Type.NUMBER },
                   description: '[x, y, z] in radians'
                 },
-                scale: { 
-                  type: Type.ARRAY, 
+                scale: {
+                  type: Type.ARRAY,
                   items: { type: Type.NUMBER },
                   description: '[x, y, z]'
                 },
@@ -136,8 +143,11 @@ export const reconstruct3DVolume = async (prompt: string, imageBase64?: string, 
  * Refines an existing 3D model based on feedback
  */
 export const refine3DVolume = async (currentModel: ModelData, feedback: string, style: ArtisticStyle, customApiKey?: string): Promise<ModelData> => {
-  const ai = new GoogleGenAI({ apiKey: customApiKey || process.env.API_KEY });
-  
+  const apiKey = customApiKey || import.meta.env.VITE_GEMINI_API_KEY;
+  if (!apiKey) throw new Error("API Key not found. Please set it in Settings.");
+
+  const ai = new GoogleGenAI({ apiKey });
+
   const systemInstruction = `You are a 3D Neural Sculptor refining an existing primitive-based model.
   You are given a list of primitives and user feedback. 
   Modify, add, or remove primitives to satisfy the feedback while maintaining the overall ${style} style.
@@ -153,7 +163,7 @@ export const refine3DVolume = async (currentModel: ModelData, feedback: string, 
   Please provide the updated list of primitives to satisfy this feedback.`;
 
   const response = await ai.models.generateContent({
-    model: 'gemini-3-pro-preview',
+    model: 'gemini-1.5-pro',
     contents: { parts: [{ text: userPrompt }] },
     config: {
       systemInstruction,
