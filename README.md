@@ -136,7 +136,7 @@ Watch MakerFlow 3D in action:
 > 3. Or use the GitHub editor to paste images directly (they'll be auto-hosted)
 
 
-![Blueprint Reference - Four-view orthographic reconstruction](docs/images/blueprint-stage.png)![Screenshot 2026-02-07 152736](https://github.com/user-attachments/assets/a5c95413-8696-4f05-9889-0a54eb84446a)
+![Blueprint Reference - Four-view orthographic reconstruction](docs/images/blueprint-stage.png)![Screenshot 2026-02-07 152821](https://github.com/user-attachments/assets/31bc59f4-e3fb-4891-bf6b-c8b651cd3e42)
 
 *Four-view orthographic blueprint generated from text prompt, showing front, back, left, and right views with artistic style selection.*
 
@@ -153,7 +153,8 @@ Watch MakerFlow 3D in action:
 *Fully rendered 3D model with texture maps and lighting, ready for export to STL![Uploading Screenshot 2026-02-07 152703.jpg…]()
  format.*
 
-![3D Workbench Solid Render 2](docs/images/solid-render-2.png)
+![3D Workbench Solid Render 2](docs/images/solid-render-2.png)![Screenshot 2026-02-07 152736](https://github.com/user-attachments/assets/1f1f54fa-0ceb-4682-a46d-5eab9ff3ca2b)
+
 *Alternative angle showing the neural sculpt output with manufacturing-optimized geometry.*
 ## API Reference
 This project consumes external APIs. It does not provide its own public API.
