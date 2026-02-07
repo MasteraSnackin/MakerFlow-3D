@@ -142,13 +142,13 @@ Watch MakerFlow 3D in action:
 
 ### 3D Workbench - Wireframe View
 
-![3D Workbench Wireframe](docs/images/wireframe-view.png)![Screenshot 2026-02-07 152637](https://github.com/user-attachments/assets/73907720-ff5c-44aa-8438-4c1a3d3a9ab8)
-
+![3D Workbench Wireframe](docs/images/wireframe-view.png)![Screenshot 2026-02-07 152703](https://github.com/user-attachments/assets/8d41a00f-757c-4d5a-85e1-443367f16b77)
 *Interactive 3D workbench displaying wireframe mesh with blueprint overlay and clipping tools for precise geometry inspection.*
 
 ### 3D Workbench - Solid Render
 
-![3D Workbench Solid Render 1](docs/images/solid-render-1.png)![Screenshot 2026-02-07 152703](https://github.com/user-attachments/assets/8d41a00f-757c-4d5a-85e1-443367f16b77)
+![3D Workbench Solid Render 1](docs/images/solid-render-1.png)![Screenshot 2026-02-07 152637](https://github.com/user-attachments/assets/73907720-ff5c-44aa-8438-4c1a3d3a9ab8)
+
 
 *Fully rendered 3D model with texture maps and lighting, ready for export to STL![Uploading Screenshot 2026-02-07 152703.jpg…]()
  format.*
