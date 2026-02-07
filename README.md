@@ -126,6 +126,16 @@ Watch MakerFlow 3D in action:
 
 ### Blueprint Generation
 
+> **📸 Note:** Screenshot images need to be added to the `docs/images/` folder. To add them:
+> 1. Create a folder `docs/images/` in your repository
+> 2. Upload the following images:
+>    - `blueprint-stage.png` - Four-view orthographic blueprint
+>    - `wireframe-view.png` - 3D wireframe view
+>    - `solid-render-1.png` - Solid render view
+>    - `solid-render-2.png` - Alternative solid render
+> 3. Or use the GitHub editor to paste images directly (they'll be auto-hosted)
+
+
 ![Blueprint Reference - Four-view orthographic reconstruction](docs/images/blueprint-stage.png)
 *Four-view orthographic blueprint generated from text prompt, showing front, back, left, and right views with artistic style selection.*
 
