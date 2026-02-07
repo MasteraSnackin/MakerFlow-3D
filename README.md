@@ -115,6 +115,15 @@ VITE_RUNWARE_API_KEY=your_key_here
 ```
 
 ## Screenshots
+
+### 🎥 Demo Video
+
+Watch MakerFlow 3D in action:
+
+[![MakerFlow 3D Demo](https://img.youtube.com/vi/GHGIIVV_QQA/maxresdefault.jpg)](https://youtu.be/GHGIIVV_QQA)
+
+**[Watch on YouTube](https://youtu.be/GHGIIVV_QQA)**
+
 ### Blueprint Generation
 
 ![Blueprint Reference - Four-view orthographic reconstruction](docs/images/blueprint-stage.png)
